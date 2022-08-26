@@ -6,26 +6,57 @@
   scroll-behavior: smooth;
   scroll-padding: 5.625rem;
 }
+
 :root{
   --corPreta: #242424;
   --corVermelha: #A70B0B;
   --corBranca: #DBD8D8;
   --corCinza: #777474;
 }
+
+html, body{
+  min-height: 100%;
+}
+
+body{
+  position: relative;
+}
+
+#my-canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 .navbar{
   background-color: black;
 }
+
 .navbar a {
   color: white !important;
   text-decoration: none;
   font-size: 30px;
 }
+
 .navbar a{
   font-size: 20px;
 }
+
 .navbar-brand::first-letter{
   color: red;
 }
+
+.navbar-hover {
+  background-color: white;
+}
+
+.navbar-hover a {
+  color: black !important;
+}
+
 #banner{
   background-image: url(https://www.leiagora.com.br/imgsite/noticias/amp-AE_PET_cao_e_gato_web.jpg);
   height: calc(100vh - 56px);
@@ -33,26 +64,35 @@
   background-attachment: fixed;
   color: white;
 }
+
 h2,
 h3,
 h4 {
     font-size: 30px;
     font-family: 'Manrope', sans-serif;
 }
+
 h3{
   font-size: 20px;
   margin-top: 10px;
   font-weight: bold;
 }
+
+#mensagem-footer:before {
+  content: "Feito com ♥ pela Assistente Técnica Isa e sua pequena estagiária Aurora";
+}
+
 section>h2 {
     margin: 60px 0px;
 }
+
 .card-pet img{
   height: 21.875rem;
   width: 100%;
   object-fit: cover;
   transition: all .3s ease-in-out;
 }
+
 .image-container{
   height: 21.875rem;
   width: 100%;
@@ -60,9 +100,11 @@ section>h2 {
   border-radius: 15px;
   overflow: hidden;
 }
+
 .card-pet img:hover {
   transform: scale(1.1);
 }
+
 footer {
   padding: 20px;
   margin-top: 30px;
@@ -70,12 +112,24 @@ footer {
   color: white;
   width: 100%;
 }
+
 footer h3 {
   color: white;
 }
+
 footer h3::first-letter {
   color: black;
 }
+
 footer strong {
   color: black;
+}
+
+#section-secreta {
+  display: none;
+}
+
+#mensagem-erro {
+  color: red;
+  margin-top: 10px;
 }
